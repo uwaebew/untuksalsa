@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(#ffffff, #fff8e7);
+  color: #444;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
+              url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  color: gold;
+}
+
+.subtitle {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* BUTTON IG */
+.ig-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: gold;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.ig-btn:hover {
+  background: #d4af37;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 20px;
+}
+
+/* BOUQUET */
+.bouquet {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background: radial-gradient(circle, gold, white);
+  border-radius: 50%;
+  animation: glow 2s infinite alternate;
+}
+
+/* CAKE */
+.cake {
+  width: 120px;
+  height: 80px;
+  background: gold;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.candle {
+  width: 10px;
+  height: 30px;
+  background: white;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* BALLOONS */
+.balloons::before {
+  content: "🎈🎈🎈🎈🎈";
+  font-size: 40px;
+  animation: float 3s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes glow {
+  from { box-shadow: 0 0 10px gold; }
+  to { box-shadow: 0 0 30px gold; }
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+/* EFFECTS */
+.flowers::before {
+  content: "🌸 🌼 🌸 🌼 🌸";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation: fall 5s linear infinite;
+}
+
+.sparkles::before {
+  content: "✨ ✨ ✨ ✨ ✨";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation: fall 7s linear infinite;
+}
+
+@keyframes fall {
+  from { transform: translateY(-100px); }
+  to { transform: translateY(100vh); }
+}
