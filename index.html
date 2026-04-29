@@ -1,71 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Untuk Kamu Iyahhh💖</title>
+<meta charset="UTF-8">
+<title>Untuk mu salsaa 💖</title>
 
-  <!-- FONT ELEGAN -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- GERBANG -->
-<section class="hero">
+<section class="hero" onclick="openGate()">
   <div class="overlay">
-    <h1 class="title">Selamat Ulang Tahun Sall</h1>
+    <h1 class="title">Selamat Ulang Tahun Ya Mawaddah</h1>
 
-    <p class="subtitle">
-      hari ini spesial banget…  
-      semoga kamu selalu dikelilingi hal-hal baik 💖
-      sama maaf aku telat ngucapin selamat sama ngasih hadiah nya huhuu
-    </p>
+    <p id="text" class="subtitle"></p>
 
-    <!-- 🌸 TOMBOL INSTAGRAM -->
     <!-- 🔥 GANTI USERNAME DI SINI -->
     <a href="https://instagram.com/mawaddahsalsabilaaa" target="_blank" class="ig-btn">
-      Birthday girllll yuhuu 💕
+      Lihat Instagram 💕
     </a>
 
-    <p class="hint">scroll ke bawah ✨</p>
+    <p class="hint">klik gerbang ya ✨</p>
   </div>
 </section>
 
 <!-- EFEK -->
-<div class="effects">
-  <div class="flowers"></div>
-  <div class="sparkles"></div>
-</div>
+<div id="effects"></div>
 
 <!-- BOUQUET -->
-<section class="section">
-  <h2>Untuk Kamu 🌹</h2>
+<section class="section hidden" id="bouquet">
+  <h2>Untuk mu nichh 💐</h2>
   <div class="bouquet"></div>
-  <p>
-    makasih ya udah jadi bagian temankuu  
-    semoga senyummu nggak pernah hilang bebbb 💖
-  </p>
 </section>
 
 <!-- KUE -->
-<section class="section">
-  <h2>Make a Wish 🎂</h2>
-  <div class="cake">
-    <div class="candle"></div>
+<section class="section hidden" id="cake">
+  <h2>Klik kue cepat cepat 🎂</h2>
+  <div class="cake" onclick="blowCandle()">
+    <div class="candle" id="candle"></div>
   </div>
 </section>
 
 <!-- BALON -->
-<section class="section">
-  <h2>Terakhir Nih 🎈</h2>
-  <div class="balloons"></div>
-  <p>
-    semoga semua hal baik datang ke kamu  
-    satu per satu… pelan tapi pasti 💖
-    MAT ULANG TAHUN SALLLLLL
-  </p>
+<section class="section hidden" id="balloon">
+  <h2>Terakhir 🎈</h2>
+  <div class="balloons" onclick="releaseBalloons()"></div>
 </section>
 
 <script src="script.js"></script>
