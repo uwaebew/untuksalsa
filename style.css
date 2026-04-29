@@ -1,120 +1,108 @@
-body {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  background: linear-gradient(#ffffff, #fff8e7);
-  color: #444;
-  text-align: center;
+body{
+  margin:0;
+  font-family:'Playfair Display',serif;
+  background:linear-gradient(#fff,#fff8e7);
+  overflow:hidden;
+  text-align:center;
 }
 
 /* HERO */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
-              url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.9)),
+  url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+  background-size:cover;
+  cursor:pointer;
 }
 
-.title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
-  color: gold;
+.title{
+  font-family:'Great Vibes';
+  font-size:60px;
+  color:gold;
 }
 
-.subtitle {
-  max-width: 500px;
-  margin: auto;
-}
+.subtitle{max-width:400px;margin:auto;}
 
-/* BUTTON IG */
-.ig-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: gold;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  transition: 0.3s;
-}
-
-.ig-btn:hover {
-  background: #d4af37;
+/* BUTTON */
+.ig-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  background:gold;
+  color:white;
+  border-radius:20px;
+  text-decoration:none;
 }
 
 /* SECTION */
-.section {
-  padding: 80px 20px;
+.section{
+  padding:80px;
+}
+
+.hidden{
+  opacity:0;
+  transform:translateY(50px);
+  transition:1.2s;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* BOUQUET */
-.bouquet {
-  width: 150px;
-  height: 150px;
-  margin: auto;
-  background: radial-gradient(circle, gold, white);
-  border-radius: 50%;
-  animation: glow 2s infinite alternate;
+.bouquet{
+  width:150px;height:150px;margin:auto;
+  background:radial-gradient(circle,gold,white);
+  border-radius:50%;
+  animation:glow 2s infinite alternate;
 }
 
 /* CAKE */
-.cake {
-  width: 120px;
-  height: 80px;
-  background: gold;
-  margin: auto;
-  border-radius: 10px;
-  position: relative;
+.cake{
+  width:120px;height:80px;background:gold;
+  margin:auto;border-radius:10px;
+  position:relative;cursor:pointer;
 }
 
-.candle {
-  width: 10px;
-  height: 30px;
-  background: white;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+.candle{
+  width:10px;height:30px;background:white;
+  position:absolute;top:-30px;left:50%;
+  transform:translateX(-50%);
 }
 
-/* BALLOONS */
-.balloons::before {
-  content: "🎈🎈🎈🎈🎈";
-  font-size: 40px;
-  animation: float 3s infinite;
+/* BALLOON */
+.balloons{
+  font-size:40px;
+}
+.balloons::before{
+  content:"🎈🎈🎈🎈🎈";
 }
 
-/* ANIMATIONS */
-@keyframes glow {
-  from { box-shadow: 0 0 10px gold; }
-  to { box-shadow: 0 0 30px gold; }
+/* ANIMATION */
+@keyframes glow{
+  from{box-shadow:0 0 10px gold;}
+  to{box-shadow:0 0 30px gold;}
 }
 
-@keyframes float {
-  from { transform: translateY(0); }
-  to { transform: translateY(-20px); }
+/* EFFECT ELEMENT */
+.effect{
+  position:fixed;
+  font-size:20px;
+  pointer-events:none;
 }
 
-/* EFFECTS */
-.flowers::before {
-  content: "🌸 🌼 🌸 🌼 🌸";
-  position: fixed;
-  top: 0;
-  width: 100%;
-  animation: fall 5s linear infinite;
+/* BUTTERFLY */
+.butterfly{
+  position:fixed;
+  font-size:25px;
+  animation:fly 10s linear infinite;
 }
-
-.sparkles::before {
-  content: "✨ ✨ ✨ ✨ ✨";
-  position: fixed;
-  top: 0;
-  width: 100%;
-  animation: fall 7s linear infinite;
-}
-
-@keyframes fall {
-  from { transform: translateY(-100px); }
-  to { transform: translateY(100vh); }
+@keyframes fly{
+  0%{transform:translate(0,0);}
+  50%{transform:translate(200px,-100px);}
+  100%{transform:translate(400px,50px);}
 }
